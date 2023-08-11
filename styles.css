@@ -147,3 +147,79 @@ hr {
     width: 95%;
     margin: auto;
 }
+
+/* ---------FAQs Section--------- */
+
+.faqs {
+    padding: 50px 12%;
+}
+
+.faqs h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.accordion {
+    margin: 24px 0;
+    width: 100%;
+    font-size: 24px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 4px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    font-size: 24px;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion li label:hover {
+    background: #414141;
+}
+
+label::after {
+    content: '+';
+    font-size: 42px;
+    position: absolute;
+    right: 24px;
+    transition: transform 0.1s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .answer {
+    background: #303030;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .answer {
+    max-height: fit-content;
+    padding: 24px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(133deg);
+}
+
+.form {
+    padding: 8px 16%;
+}
+
+.form p {
+    font-size: 20px;
+    margin-bottom: 18px;
+    text-align: center;
+}
